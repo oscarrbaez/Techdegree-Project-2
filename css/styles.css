@@ -1,0 +1,282 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+* {
+  box-sizing: border-box;
+}
+body {
+  /* font-family: "Yaldevi", sans-serif; */
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  margin-top: 40px;
+}
+/* section {
+  padding: 4rem 0;
+  border-bottom: 1px solid rgb(91, 91, 92);
+} */
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+  font-size: 1.35em;
+}
+
+.main-header {
+  background-color: rgb(248, 247, 246);
+  padding-bottom: 10%;
+}
+
+.main-nav {
+  margin-top: 5px;
+}
+
+.name,
+.main-nav a {
+  text-align: center;
+  display: block;
+  padding: 10px 15px;
+}
+.main-nav a {
+  font-size: 0.95em;
+  text-transform: uppercase;
+}
+
+#header-portfolio {
+  text-align: center;
+  margin-top: 55px;
+}
+
+/* ---- Layout Containers ---- */
+
+.container {
+  text-align: center;
+  padding: 3.2em 0;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 48px;
+}
+
+.container p {
+  text-align: justify;
+}
+
+.portfolio-container {
+  text-align: center;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 48px;
+}
+
+.project {
+  padding-bottom: 38px;
+}
+
+#contact-header {
+  text-align: center;
+  margin: auto;
+}
+
+.contact-info {
+  text-align: center;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 0px;
+  padding-top: 30px;
+}
+
+.main-footer {
+  margin-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.main-footer a {
+  text-decoration: none;
+}
+
+/* ---- Page Elements ---- */
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media screen and (min-width: 320px) {
+  .main-header,
+  .main-nav,
+  .main-footer {
+    display: flex;
+  }
+
+  .main-header,
+  .main-nav,
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .portfolio-container {
+    flex-direction: column;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .portfolio-container h3 {
+    text-align: center;
+  }
+
+  .main-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .bottom-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    flex-direction: row;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 87%;
+  }
+  .container p {
+    margin-top: 0;
+    margin-right: 20px;
+  }
+
+  .project {
+    float: left;
+    width: 45%;
+    margin: auto;
+  }
+
+  .portfolio-container {
+    padding-left: 60px;
+  }
+
+  .project:nth-child(even) {
+    margin-right: 5%;
+    margin-left: 2%;
+  }
+
+  .contact-info {
+    margin: auto;
+    max-width: 60%;
+  }
+
+  .main-footer {
+    border-top: solid rgb(185, 185, 187);
+    border-width: thin;
+    margin-top: 60px;
+    padding-top: 10px;
+  }
+
+  .bottom-nav {
+    display: flex;
+  }
+
+  .bottom-nav a {
+    padding-left: 25px;
+  }
+
+  .top {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  .banner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .name {
+    position: relative;
+    right: 280px;
+  }
+
+  .main-nav {
+    margin: auto;
+    position: relative;
+    left: 290px;
+  }
+
+  .container {
+    max-width: 92%;
+  }
+
+  .container p {
+    margin: auto;
+    margin-right: 40px;
+    margin-left: 20px;
+    padding-bottom: 70px;
+    font-size: 1.3em;
+  }
+
+  .project {
+    width: 30%;
+  }
+
+  .project:nth-child(even) {
+    margin-right: initial;
+  }
+
+  .project.proj-3 {
+    margin-right: 1%;
+  }
+
+  .project.proj-3,
+  .project.proj-6 {
+    margin-left: 3%;
+  }
+
+  .project.proj-1 {
+    margin-right: 1%;
+  }
+
+  .project.proj-4 {
+    margin-left: 0;
+    margin-right: 3%;
+  }
+
+  #contact-header,
+  .contact-info {
+    max-width: 50%;
+  }
+}
